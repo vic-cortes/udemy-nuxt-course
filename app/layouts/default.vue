@@ -6,12 +6,7 @@
           >Victor</NuxtLink
         >
       </div>
-      <nav class="font-mono">
-        <ul class="flex space-x-4">
-          <li><NuxtLink to="/">Home</NuxtLink></li>
-          <li><NuxtLink to="/about">About</NuxtLink></li>
-        </ul>
-      </nav>
+      <Menu />
     </header>
     <main class="p-2">
       <slot />
