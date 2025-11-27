@@ -1,11 +1,20 @@
 <template>
-  <div>
-    <nav>
-      <ul>
-        <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/about">About</NuxtLink></li>
-      </ul>
-    </nav>
-    <slot />
+  <div class="container mx-auto max-w-3xl">
+    <header class="flex justify-between items-center mt-5">
+      <div>
+        <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-gray-200"
+          >Victor</NuxtLink
+        >
+      </div>
+      <nav class="font-mono">
+        <ul class="flex space-x-4">
+          <li><NuxtLink to="/">Home</NuxtLink></li>
+          <li><NuxtLink to="/about">About</NuxtLink></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="p-2">
+      <slot />
+    </main>
   </div>
 </template>
