@@ -1,17 +1,5 @@
 <template>
-  <div>
-    <h1>Welcome to the Nuxt.js Course!</h1>
-    <p>This is the about page.</p>
-    <button @click="enableCustomLayout">Enable Custom Layout</button>
-  </div>
+  <article class="prose dark:prose-invert prose-h1:text-2xl">
+    <ContentDoc path="/about" />
+  </article>
 </template>
-
-<script setup>
-function enableCustomLayout() {
-  setPageLayout('another');
-}
-
-useHead({
-  title: 'About',
-});
-</script>
