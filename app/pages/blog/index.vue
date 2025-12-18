@@ -1,6 +1,18 @@
 <template>
-  <div>
-    <h1>Welcome to the Nuxt.js Course!</h1>
-    <p>These are all the blogs.</p>
-  </div>
+  <section>
+    <ul>
+      <li v-for="post in posts" :key="post._path">
+        <NuxtLink :to="post._path">
+          {{ post.title }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </section>
 </template>
+
+<script setup>
+const { data: posts } = await useAsyncData('blog-list', () =>
+  queryContent('/blog').only(['title', 'description', '_path']).find()
+);
+console.log(posts);
+</script>
